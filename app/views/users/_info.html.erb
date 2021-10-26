@@ -1,0 +1,19 @@
+  <h2>User info</h2>
+  <div>
+    <%= attachment_image_tag user, :image_id, size: "40x40", fallback: "no_image.jpg" %>
+  </div>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>name</th>
+        <th><%= user.name %></th>
+      </tr>
+      <tr>
+        <th>introduction</th>
+        <th><%= user.introduction %></th>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <%= link_to "edit", edit_user_path(user.id), class:"btn btn-block btn-light btn-outline-dark btn-sm" %>
+  </div>
