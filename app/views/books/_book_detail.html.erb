@@ -7,6 +7,7 @@
       </td>
       <td><%= book.title %></td>
       <td><%= book.opinion %></td>
+      <td>コメント数:<%= book.book_comments.count %></td>
       <% if book.user == current_user %>
         <td><%= link_to "edit", edit_book_path(book.id), class:"btn btn-success btn-sm" %></td>
         <td><%= link_to "Destroy", book_path(book.id), method: :delete, class:"btn btn-danger btn-sm",data: {confirm: "本当に消しますか"} %></td>
