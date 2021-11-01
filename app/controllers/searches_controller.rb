@@ -3,8 +3,8 @@ class SearchesController < ApplicationController
   def search
     @value = params["search"]["value"]
     @model = params["search"]["model"]
-    @how = params["search"]["how"]
-    @datas = search_for(@how, @model, @value)
+    how = params["search"]["how"]
+    @datas = search_for(how, @model, @value)
   end
   
   private
@@ -53,6 +53,5 @@ class SearchesController < ApplicationController
       partical(model, value)
     end
   end
-  
   
 end
